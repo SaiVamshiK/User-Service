@@ -16,4 +16,9 @@ public class UserserviceApplication {
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
+	/*
+		We are implementing service registry in order to register all our microservices in the service registry.
+		This way we will be able to scale our microservices very easily.
+		Also we will be able to maintain it really well.
+	*/
 }
