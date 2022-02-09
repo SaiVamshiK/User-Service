@@ -24,7 +24,7 @@ public class UserController {
     @GetMapping("/{userID}")
     public ResponseObject getUserAndDepartmentByUserId(@PathVariable("userID") String userId){
         User user = userService.getUserByID(Long.valueOf(userId));
-        Department department = restTemplate.getForObject("http://localhost:8081/departments/"+String.valueOf(user.getDepartmentId()),
+        Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/departments/"+String.valueOf(user.getDepartmentId()),
                 Department.class);
         ResponseObject responseObject = new ResponseObject();
         responseObject.setUser(user);
